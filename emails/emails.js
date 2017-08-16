@@ -14,7 +14,7 @@ module.exports = {
 		const {from, to, subject, text} = req
 
 		var mailOptions = {
-			from: "Kevin",
+			from,
 			to,
 			subject,
 			text,
