@@ -2,6 +2,8 @@ var express = require('express')
 var app = express()
 const port = process.env.PORT || 3084;
 
+const isLocal = process.env.PORT ?  "http://www.happilyeverafterstl.com/" : 'http://localhost:3084'
+
 var bodyParser = require('body-parser')
 var emails = require("./emails/emails");
 
@@ -21,7 +23,7 @@ app.use(bodyParser.json());
 app.use(function (req, res, next) {
 
 	// Website you wish to allow to connect
-	res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3084');
+	res.setHeader('Access-Control-Allow-Origin', isLocal);
 
 	// Request methods you wish to allow
 	res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
