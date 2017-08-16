@@ -2,7 +2,7 @@ var express = require('express')
 var app = express()
 const port = process.env.PORT || 3084;
 
-const isLocal = process.env.PORT ?  "http://www.happilyeverafterstl.com/" : 'http://localhost:3084'
+const isLocal = process.env.PORT ?  "http://www.happilyeverafterstl.com" : 'http://localhost:3084'
 
 var bodyParser = require('body-parser')
 var emails = require("./emails/emails");
